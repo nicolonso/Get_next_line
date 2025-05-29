@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 18:19:38 by nalfonso          #+#    #+#             */
-/*   Updated: 2025/05/28 21:50:29 by nalfonso         ###   ########.fr       */
+/*   Updated: 2025/05/29 18:27:52 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <stdio.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 6
+#  define BUFFER_SIZE 30
 # endif
 
 char	*get_next_line(int fd);
