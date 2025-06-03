@@ -6,7 +6,7 @@
 /*   By: nalfonso <nalfonso@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 18:19:24 by nalfonso          #+#    #+#             */
-/*   Updated: 2025/06/02 22:27:23 by nalfonso         ###   ########.fr       */
+/*   Updated: 2025/06/03 21:37:01 by nalfonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,7 @@ size_t ft_strlen(const char *str)
 	if (!str)
 		return (0);
 	while (str[i])
-	{
 		i++;
-		// if (str[i++] == '\n')
-		// 	return (i);
-	}
 	return (i);
 }
 
@@ -33,20 +29,25 @@ char *ft_strjoin(char *s1, char *s2)
 	char *ptr;
 	size_t i;
 	size_t j;
+	size_t l1;
+	size_t l2;
 
-	ptr = malloc (ft_strlen(s1) + ft_strlen(s2) + 1);
+	l1 = ft_strlen(s1);
+	l2 = ft_strlen(s2);
+	ptr = malloc (l1 + l2 + 1);
+	//ptr = malloc (ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!ptr)
 		return (NULL);
 	i = 0;
 	if (s1)
-		while (i < ft_strlen(s1))
+		while (i < l1)
 		{
 			ptr[i] = s1[i];
 			i++;
 		}
 	j = 0;
 	if (s2)
-		while (j < ft_strlen(s2))
+		while (j < l2)
 		{
 			ptr[i + j] = s2[j];
 			j++;
